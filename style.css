@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Crete+Round&family=Fira+Code:wght@300&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: white;
+    font-family: 'Fira Code', monospace;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+}
+
+header {
+    background-color: rgb(160, 125, 206);
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 10vh;
+    font-size: 2em;
+}
+
+header div:hover {
+    cursor: crosshair;
+}
+
+header div:hover span {
+    color: red;
+}
+
+main {
+    background-color: #333;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    height: 80vh;
+}
+
+main * {
+    margin: 1%;
+}
+
+main .sVisual {
+    height: 200px;
+    width: 100px;
+}
+
+.active {
+    border-radius: 50px;
+    background-color: blueviolet;
+}
+
+.btn {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+button {
+    padding: 1% 2%;
+    width: 10%;
+    height: auto;
+    background-color: transparent;
+    border: 1px solid rgb(160, 125, 206);
+    border-radius: 50px;
+    box-shadow: rgb(160, 125, 206) 4px 4px 0px;
+}
+
+button:active {
+    border: none;
+    transform: translateY(4px) translateX(4px);
+    box-shadow: #333 0px 0px 0px;
+}
+
+.content {
+    padding: 1%;
+    border-radius: 50px;
+    width: 100%;
+    height: auto;
+}
+
+.bar {
+    --volume: 0%;
+    position: relative;
+    width: 100%;
+    height: 50px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.bar::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    border-radius: 5px;
+    width: var(--volume);
+    background-color: green;
+    transition: width 100ms linear;
+}
+
+
+footer {
+    background-color: rgb(160, 125, 206);
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 10vh;
+    font-size: 2em;
+}
+
+
+@media screen and (max-width: 1312px) {
+    header {
+        font-size: 1.5rem;
+    }
+
+    .talk, .stop {
+        padding: 2% 4%;
+    }
+
+    footer {
+        font-size: 1.5rem;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    header {
+        font-size: 1.3rem;
+    }
+
+    .talk, .stop {
+        padding: 1% 2%;
+    }
+
+    footer {
+        font-size: 1.3rem;
+    }
+}
+
+@media screen and (max-width: 688px) {
+    header {
+        font-size: 1rem;
+    }
+
+    .talk, .stop {
+        padding: 3% 6%;
+    }
+
+    footer {
+        font-size: 1rem;
+    }
+}
